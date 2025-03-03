@@ -106,7 +106,7 @@ class Character extends SpriteComponent with HasGameRef<JumpingGame> {
   bool isJumping = false;
 
   Character(Vector2 position)
-      : super(position: position, size: Vector2(50, 50), anchor: Anchor.bottomCenter) {
+      : super(position: position, size: Vector2(50, 70), anchor: Anchor.bottomCenter) {
     velocity = Vector2.zero();
   }
 
@@ -157,7 +157,7 @@ class Turtle extends SpriteComponent with HasGameRef<JumpingGame> {
 
     position.x += speed * dt;
     if (position.x < -50) {
-      position.x = gameRef.size.x + Random().nextInt(300) + 100; // Randomized respawn
+      position.x = gameRef.size.x + Random().nextInt(300) + 250; // Randomized respawn
       scored = false;
     }
 
